@@ -34,6 +34,9 @@ body {
 }
 
 .navbar nav ul {
+    font-family:"Bellota Text", sans-serif ;
+    font-weight: 500;
+    font-style: normal;
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -294,6 +297,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+    
 }
 
 .footer-container {
@@ -305,10 +309,16 @@ footer {
 }
 
 .footer-logo {
-    font-size: 1rem;
+    font-family:"Bellota Text", sans-serif ;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
 }
 
 .footer-copyright {
+    font-family:"Bellota Text", sans-serif ;
+    font-weight: 300;
+    font-style: normal;
     font-size: 0.9rem;
 }
 
