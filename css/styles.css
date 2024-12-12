@@ -87,17 +87,63 @@ body {
 /*  3D models */
 
 .model-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers items horizontally */
-    gap: 20px; /* Adds space between models */
-    flex-wrap: wrap; /* Ensures models wrap to the next line on smaller screens */
-    margin: 20px 0px; /* Adds vertical margin around the container */
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Space between each model */
+    flex-wrap: wrap; /* Wrap to the next row on smaller screens */
+    padding: 20px; /* Add padding around the container */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.model-item {
+    text-align: center; /* Center the text and model */
+    max-width: 300px; /* Limit the width of each item */
+    padding: 10px; /* Add padding inside the item */
+    background-color: #ffffff; /* White background for each item */
+    border: 1px solid #ddd; /* Light border around each item */
+    border-radius: 10px; /* Rounded corners for each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 model-viewer {
-    width: 300px; /* Sets the width of the 3D model viewer */
-    height: 300px; /* Sets the height of the 3D model viewer */
+    width: 100%; /* Responsive width */
+    height: 300px; /* Fixed height for consistency */
+    margin-bottom: 10px; /* Space between model and label */
 }
+model-viewer:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+figcaption {
+    font-family: 'Bellota Text', sans-serif; /* Match the overall typography */
+    font-size: 1rem; /* Set font size */
+    color: #333; /* Darker text for contrast */
+    font-weight: bold; /* Emphasize label text */
+    margin-top: 10px; /* Space above the label */
+}
+
+.details-button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: black;
+    background-color: #e0f1f5; /* Blue button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #093c61; /* Darker blue on hover */
+    color: #ffffff;
+}
+
 
 
 /* Intro Section */
@@ -304,6 +350,77 @@ body {
 .box p {
     color: #555;
 }
+/* Contact Info */
+.contact-info {
+    padding: 40px;
+    background-color: #f3f3f3; /* Light background for contrast */
+    text-align: center;
+    border-top: 1px solid #ddd; /* Adds a border for separation */
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-family: 'Bellota Text', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #abc4d6; /* Blue button */
+    color: black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #093c61; /* Darker blue on hover */
+    color: white;
+}
+
 
 /* Footer */
 footer {
@@ -376,8 +493,11 @@ footer {
 
 /* 3D model */
 @media (max-width: 768px) {
+    .model-item {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
     model-viewer {
-        width: 200px;
-        height: 200px;
+        height: 200px; /* Smaller height */
     }
 }
