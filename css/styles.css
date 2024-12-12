@@ -84,6 +84,20 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
+/*  3D models */
+
+.model-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between models */
+    flex-wrap: wrap; /* Ensures models wrap to the next line on smaller screens */
+    margin: 20px 0px; /* Adds vertical margin around the container */
+}
+
+model-viewer {
+    width: 300px; /* Sets the width of the 3D model viewer */
+    height: 300px; /* Sets the height of the 3D model viewer */
+}
 
 
 /* Intro Section */
@@ -357,5 +371,13 @@ footer {
 @media (max-width: 768px) {
     .box img {
         margin-bottom: 0.5rem;
+    }
+}
+
+/* 3D model */
+@media (max-width: 768px) {
+    model-viewer {
+        width: 200px;
+        height: 200px;
     }
 }
